@@ -59,18 +59,35 @@ public class ClientMoviment : MonoBehaviour
         if (rb2d.position.x <= x && canQuit)
         {
             quantCervejas--;
+            float posicaoDoCopo;
+            switch (position)
+            {
+                case 0:
+                    posicaoDoCopo = 2.66f;
+                    break;
+                case 1:
+                    posicaoDoCopo = -0.18f;
+                    break;
+                case 2:
+                    posicaoDoCopo = -2.9f;
+                    break;
+                default:
+                    posicaoDoCopo = y;
+                    break;
+            }
             if (quantCervejas == 0)
             {
                 print("Cliente satisfeito!");
                 rb2d.gameObject.SetActive(false);
-                GameObject copoVazio = Instantiate(emptyGlass, new Vector2(x, y), transform.rotation);
+               
+                GameObject copoVazio = Instantiate(emptyGlass, new Vector2(x, posicaoDoCopo), transform.rotation);              
                 copoVazio.GetComponent<EmptyGlassScript>().setPosition(position);
             }
             else
             {
                 sprite.sprite = spriteNormal;
                 print("Cliente ainda quer mais!");
-                GameObject copoVazio = Instantiate(emptyGlass, new Vector2(x, y), transform.rotation);
+                GameObject copoVazio = Instantiate(emptyGlass, new Vector2(x, posicaoDoCopo), transform.rotation);
                 copoVazio.GetComponent<EmptyGlassScript>().setPosition(position);
                 canQuit = false;
                 evitarBugDoCopo = true;

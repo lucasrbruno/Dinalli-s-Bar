@@ -34,15 +34,15 @@ public class PlayerMoviment : MonoBehaviour
             {
 
                 case 0:
-                    newBeer.transform.position = new Vector2(3.86f, 2.59f);
+                    newBeer.transform.position = new Vector2(3.86f, 2.6f);
                     break;
 
                 case 1:
-                    newBeer.transform.position = new Vector2(3.86f, -0.34f);
+                    newBeer.transform.position = new Vector2(3.86f, -0.18f);
                     break;
 
                 case 2:
-                    newBeer.transform.position = new Vector2(3.86f, -2.98f);
+                    newBeer.transform.position = new Vector2(3.86f, -2.9f);
                     break;
 
             }

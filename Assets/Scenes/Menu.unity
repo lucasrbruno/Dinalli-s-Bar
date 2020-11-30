@@ -578,7 +578,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DINALLI'S BEER
+  m_Text: DINALLI'S BAR
 --- !u!222 &790038696
 CanvasRenderer:
   m_ObjectHideFlags: 0
